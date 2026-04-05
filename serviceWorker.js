@@ -12,8 +12,13 @@ self.addEventListener('install', (e) => {
 
 self.addEventListener('fetch', (e) => {
     e.respondWith(
-        caches.match(e.request).then((response) => {
-            return response || fetch(e.request);
-        })
+        fetch(e.request)
+            .then((response) => {
+                return caches.open('pwa-cache').then((cache) => {
+                    cache.put(e.request, response.clone());
+                    return response;
+                });
+            })
+            .catch(() => caches.match(e.request))
     );
 });
