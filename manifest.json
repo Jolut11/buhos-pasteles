@@ -1,12 +1,7 @@
 {
     "name": "buhos y pasteles",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.html",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "",
-    "license": "ISC",
-    "display": "fullscreen"
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/"
 }
