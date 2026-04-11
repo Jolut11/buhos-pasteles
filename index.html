@@ -1,21 +1,58 @@
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <title>Pagina de prueba</title>
-    <script>
-        // Registrar Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('serviceWorker.js');
-        }
-    </script>
+
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-  <div class="card">
-    <h2>Mi Card</h2>
-    <p>Este es un ejemplo de un card con HTML, CSS y JavaScript.</p>
-    <button id="btn">Haz clic</button>
-  </div>
-  <script src="script.js"></script>
+    <!-- Tabs buttons -->
+    <div class="tabs" role="tablist">
+        <button
+            class="tab active"
+            role="tab"
+            aria-selected="true"
+            aria-controls="panel-1"
+            id="tab-1"
+            data-panel="PedidosPanel.html"
+        >
+            Pedidos
+        </button>
+
+        <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-2"
+            id="tab-2"
+            data-panel="InsumosPanel.html"
+        >
+            Insumos
+        </button>
+        <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-3"
+            id="tab-3"
+            data-panel="RecetasPanel.html"
+        >
+            Recetas
+        </button>
+
+        <button
+            class="tab"
+            role="tab"
+            aria-selected="false"
+            aria-controls="panel-4"
+            id="tab-4"
+            data-panel="FinanzasPanel.html"
+        >
+            Finanzas
+        </button>
+    </div>
+
+    <div id="contenido"></div>
 </body>
