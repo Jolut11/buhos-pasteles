@@ -9,50 +9,57 @@
 
 <body>
     <!-- Tabs buttons -->
-    <div class="tabs" role="tablist">
-        <button
-            class="tab active"
-            role="tab"
-            aria-selected="true"
-            aria-controls="panel-1"
-            id="tab-1"
-            data-panel="PedidosPanel.html"
-        >
-            Pedidos
-        </button>
+    <div class="container">
+      <div class="icon-container">
+        <img class="principalIcon" src="icon.png">
+      </div>
+      
+      <h1 class="principalTitle">Buhos y Pasteles</h1>
+        <div class="tabs" role="tablist">
+            <button
+                class="tab active"
+                role="tab"
+                aria-selected="true"
+                aria-controls="panel-1"
+                id="tab-1"
+                data-panel="PedidosPanel.html"
+            >
+                Pedidos
+            </button>
 
-        <button
-            class="tab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-2"
-            id="tab-2"
-            data-panel="InsumosPanel.html"
-        >
-            Insumos
-        </button>
-        <button
-            class="tab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-3"
-            id="tab-3"
-            data-panel="RecetasPanel.html"
-        >
-            Recetas
-        </button>
-        
-        <button
-            class="tab"
-            role="tab"
-            aria-selected="false"
-            aria-controls="panel-4"
-            id="tab-4"
-            data-panel="FinanzasPanel.html"
-        >
-            Finanzas
-        </button>
+            <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-2"
+                id="tab-2"
+                data-panel="InsumosPanel.html"
+            >
+                Insumos
+            </button>
+            <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-3"
+                id="tab-3"
+                data-panel="RecetasPanel.html"
+            >
+                Recetas
+            </button>
+
+            <button
+                class="tab"
+                role="tab"
+                aria-selected="false"
+                aria-controls="panel-4"
+                id="tab-4"
+                data-panel="FinanzasPanel.html"
+            >
+                Finanzas
+            </button>
+        </div>
+
+        <div id="contenido" class="panel"></div>
     </div>
-
-    <div id="contenido"></div>
 </body>

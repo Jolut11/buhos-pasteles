@@ -1,36 +1,99 @@
+:root {
+    --color-titulo: black;
+    --color-fondo: #ffe5c9;
+    --color-fondo-panel: white;
+    --color-tab-activa: black;
+    --color-tab-inactiva: #bc763e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.principalIcon {
+    width: 100%;
+}
+
+.icon-container {
+    width: 50%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 20px auto; /* centra horizontalmente */
+
+    border-radius: 50%;
+    background: white;
+}
+
+.principalIcon {
+    width: 100%;
+    display: block; /* evita espacios raros */
+}
+
 .tabs {
-  display: flex;
-  border-bottom: 2px solid #ddd;
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    max-height: 40px;
+    display: flex;
+    flex-direction: row;
 }
 
 .tab {
-  padding: 10px 20px;
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-size: 16px;
-  position: relative;
+    color: var(--color-tab-inactiva);
+    padding: 10px 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    min-width: 0;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
 }
 
 .tab.active {
-  font-weight: bold;
+    color: var(--color-tab-activa);
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .tab.active::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #007BFF;
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: none;
 }
 
 .panel {
-  display: none;
-  padding: 20px;
+    flex: 1;
+    display: flex;
+    border-radius: 40px 40px 0 0;
+    padding: 0px 40px 0px 40;
+    overflow: hidden;
+    background: var(--color-fondo-panel);
 }
 
-.panel.active {
-  display: block;
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    background: var(--color-fondo);
+}
+
+.principalTitle{
+  text-align: center;
 }

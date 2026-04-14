@@ -21,6 +21,7 @@ const cache = {}; // cache en memoria
 async function cargarPanel(ruta) {
     try {
         // Si ya lo cargaste antes → usa memoria
+
         if (cache[ruta]) {
             contenedor.innerHTML = cache[ruta];
             return;
